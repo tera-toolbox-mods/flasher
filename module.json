@@ -1,0 +1,14 @@
+{
+    "name": "flasher",
+    "author": "Caali",
+    "description": "Flashes your client (like when receiving a negotiation request) to notify you of certain events (for example instance matching completed).",
+    "version": "1.0",
+    "options": {
+        "niceName": "Flasher",
+        "guiName": "Flasher",
+        "settingsVersion": 1,
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js"
+    },
+    "servers": ["https://raw.githubusercontent.com/caali-hackerman/flasher/master/"]
+}

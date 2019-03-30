@@ -1,0 +1,11 @@
+{
+    "files": {
+        "index.js": "b128118530e4c26771c6a4265ec9981786f7c6fe558ad06c6cf3112718bdf4bb",
+        "settings_migrator.js": "24db7291835b9e76b4ee0c9c719efcc00efdd18336bcbbc549a5688cc5018f09",
+        "settings_structure.js": "5885d799d64500649bf729ef9920af4beb3b1799977d3e2d339ee58c71dd19cc"
+    },
+    "defs": {
+        "S_FIN_INTER_PARTY_MATCH": "raw",
+        "S_SYSTEM_MESSAGE": 1
+    }
+}
