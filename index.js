@@ -7,9 +7,33 @@ module.exports = function Flasher(mod) {
         mod.warn('It is highly recommended that you download the latest official version from the #proxy channel in https://discord.gg/dUNDDtw');
     }
 
-    // Hooks
+    // Hooks (thanks to Foglio/Risenio for some of these)
     mod.hook('S_FIN_INTER_PARTY_MATCH', 'raw', _ => {
         if(mod.settings.instanceMatching)
+            mod.clientInterface.flashWindow();
+    });
+    mod.hook('S_BATTLE_FIELD_ENTRANCE_INFO', 'raw', _ => {
+        if(mod.settings.instanceMatching)
+            mod.clientInterface.flashWindow();
+    });
+    
+    mod.hook('S_WHISPER', 'raw', _ => {
+        if(mod.settings.whisper)
+            mod.clientInterface.flashWindow();
+    });
+    
+    mod.hook('S_OTHER_USER_APPLY_PARTY', 'raw', _ => {
+        if(mod.settings.lfgApplication)
+            mod.clientInterface.flashWindow();
+    });
+    
+    mod.hook('S_ASK_TELEPORT', 'raw', _ => {
+        if(mod.settings.partySummon)
+            mod.clientInterface.flashWindow();
+    });
+    
+    mod.hook('S_NOTIFY_GUILD_QUEST_URGENT', 'raw', _ => {
+        if(mod.settings.gbam)
             mod.clientInterface.flashWindow();
     });
 
@@ -25,9 +49,14 @@ module.exports = function Flasher(mod) {
             }
         }
     });
+    
+    mod.game.me.on('enter_combat', () => {
+        if(mod.settings.enterCombat)
+            mod.clientInterface.flashWindow();
+    });
 
     // Commands
-    const PURPOSES = ['instanceMatching', 'worldBoss'];
+    const PURPOSES = ['instanceMatching', 'worldBoss', 'whisper', 'lfgApplication', 'partySummon', 'enterCombat', 'gbam'];
     mod.command.add('flasher', {
         $default(purpose) {
             if (PURPOSES.indexOf(purpose) < 0) {
@@ -52,7 +81,7 @@ module.exports = function Flasher(mod) {
     // Settings UI
     let ui = null;
     if (global.TeraProxy.GUIMode) {
-        ui = new SettingsUI(mod, require('./settings_structure'), mod.settings, { height: 232 });
+        ui = new SettingsUI(mod, require('./settings_structure'), mod.settings, { height: 295 });
         ui.on('update', settings => mod.settings = settings);
 
         this.destructor = () => {

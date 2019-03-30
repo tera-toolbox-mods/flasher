@@ -1,6 +1,11 @@
 const DefaultSettings = {
     "instanceMatching": true,
     "worldBoss": true,
+    "whisper": true,
+    "lfgApplication": true,
+    "enterCombat": true,
+    "partySummon": true,
+    "gbam": true,
 }
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {

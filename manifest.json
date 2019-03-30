@@ -1,11 +1,16 @@
 {
     "files": {
-        "index.js": "b128118530e4c26771c6a4265ec9981786f7c6fe558ad06c6cf3112718bdf4bb",
-        "settings_migrator.js": "24db7291835b9e76b4ee0c9c719efcc00efdd18336bcbbc549a5688cc5018f09",
-        "settings_structure.js": "5885d799d64500649bf729ef9920af4beb3b1799977d3e2d339ee58c71dd19cc"
+        "index.js": "b71e50345a48fca5158922f9a669604e9937dca077cd5da4c3335209ea6f147c",
+        "settings_migrator.js": "0c2ca50020da9a0c98ae330454b3e16599dbcf6448556b7f7076d4ce8289c365",
+        "settings_structure.js": "53ad5c480e1ae6d1a35fb97d126f9d314e3bd92f4a439eae252c158618147a00"
     },
     "defs": {
         "S_FIN_INTER_PARTY_MATCH": "raw",
+        "S_BATTLE_FIELD_ENTRANCE_INFO": "raw",
+        "S_WHISPER": "raw",
+        "S_OTHER_USER_APPLY_PARTY": "raw",
+        "S_ASK_TELEPORT": "raw",
+        "S_NOTIFY_GUILD_QUEST_URGENT": "raw",
         "S_SYSTEM_MESSAGE": 1
     }
 }
