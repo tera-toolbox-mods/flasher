@@ -10,5 +10,5 @@
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"
     },
-    "servers": ["https://raw.githubusercontent.com/caali-hackerman/flasher/master/"]
+    "servers": ["https://raw.githubusercontent.com/tera-toolbox-mods/flasher/master/"]
 }
