@@ -1,12 +1,6 @@
 const SettingsUI = require('tera-mod-ui').Settings;
 
 module.exports = function Flasher(mod) {
-    if(mod.proxyAuthor !== 'caali' || !global.TeraProxy) {
-        mod.warn('You are trying to use Flasher on an unsupported legacy version of tera-proxy.');
-        mod.warn('The module may not work as expected, and even if it works for now, it may break at any point in the future!');
-        mod.warn('It is highly recommended that you download the latest official version from the #proxy channel in https://discord.gg/dUNDDtw');
-    }
-
     // Hooks (thanks to Foglio/Risenio for some of these)
     mod.hook('S_FIN_INTER_PARTY_MATCH', 'raw', _ => {
         if(mod.settings.instanceMatching)
