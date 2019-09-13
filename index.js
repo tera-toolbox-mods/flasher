@@ -2,31 +2,31 @@ const SettingsUI = require('tera-mod-ui').Settings;
 
 module.exports = function Flasher(mod) {
     // Hooks (thanks to Foglio/Risenio for some of these)
-    mod.hook('S_FIN_INTER_PARTY_MATCH', 'raw', _ => {
+    mod.hook('S_FIN_INTER_PARTY_MATCH', 'event', () => {
         if(mod.settings.instanceMatching)
             mod.clientInterface.flashWindow();
     });
-    mod.hook('S_BATTLE_FIELD_ENTRANCE_INFO', 'raw', _ => {
+    mod.hook('S_BATTLE_FIELD_ENTRANCE_INFO', 'event', () => {
         if(mod.settings.instanceMatching)
             mod.clientInterface.flashWindow();
     });
-    
-    mod.hook('S_WHISPER', 'raw', _ => {
+
+    mod.hook('S_WHISPER', 'event', () => {
         if(mod.settings.whisper)
             mod.clientInterface.flashWindow();
     });
-    
-    mod.hook('S_OTHER_USER_APPLY_PARTY', 'raw', _ => {
+
+    mod.hook('S_OTHER_USER_APPLY_PARTY', 'event', () => {
         if(mod.settings.lfgApplication)
             mod.clientInterface.flashWindow();
     });
-    
-    mod.hook('S_ASK_TELEPORT', 'raw', _ => {
+
+    mod.hook('S_ASK_TELEPORT', 'event', () => {
         if(mod.settings.partySummon)
             mod.clientInterface.flashWindow();
     });
-    
-    mod.hook('S_NOTIFY_GUILD_QUEST_URGENT', 'raw', _ => {
+
+    mod.hook('S_NOTIFY_GUILD_QUEST_URGENT', 'event', () => {
         if(mod.settings.gbam)
             mod.clientInterface.flashWindow();
     });
@@ -43,7 +43,7 @@ module.exports = function Flasher(mod) {
             }
         }
     });
-    
+
     mod.game.me.on('enter_combat', () => {
         if(mod.settings.enterCombat)
             mod.clientInterface.flashWindow();
