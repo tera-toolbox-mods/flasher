@@ -4,7 +4,7 @@
     "description": "Flashes your client (like when receiving a negotiation request) to notify you of certain events (for example instance matching completed).",
     "version": "1.0",
     "options": {
-        "niceName": "Flasher",
+        "cliName": "Flasher",
         "guiName": "Flasher",
         "settingsVersion": 1,
         "settingsFile": "config.json",

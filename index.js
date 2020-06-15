@@ -1,6 +1,6 @@
 const SettingsUI = require('tera-mod-ui').Settings;
 
-module.exports = function Flasher(mod) {
+exports.NetworkMod = function(mod) {
     // Hooks (thanks to Foglio/Risenio for some of these)
     mod.hook('S_FIN_INTER_PARTY_MATCH', 'event', () => {
         if(mod.settings.instanceMatching)

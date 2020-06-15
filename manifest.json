@@ -1,17 +1,17 @@
 {
     "files": {
-        "index.js": "520ac319cf342dc9e0d231b01b6e1fca03c8d5f3b9974ccbfaeedd100975db69",
-        "module.json": "0a5460d463fb2398133831229d4f48f6de95a1c6e70162e4d513337d328f88a3",
+        "index.js": "bff3ae6bf708628571dbe77a84b33b5eb141336db747eb7c123ae80c4e18bd0c",
+        "module.json": "113456edb4f1c7f12840fcd02fee8a838ee0dabb23cd714a94a06ca841883efa",
         "settings_migrator.js": "0c2ca50020da9a0c98ae330454b3e16599dbcf6448556b7f7076d4ce8289c365",
         "settings_structure.js": "53ad5c480e1ae6d1a35fb97d126f9d314e3bd92f4a439eae252c158618147a00"
     },
     "defs": {
-        "S_FIN_INTER_PARTY_MATCH": "raw",
-        "S_BATTLE_FIELD_ENTRANCE_INFO": "raw",
-        "S_WHISPER": "raw",
-        "S_OTHER_USER_APPLY_PARTY": "raw",
-        "S_ASK_TELEPORT": "raw",
-        "S_NOTIFY_GUILD_QUEST_URGENT": "raw",
+        "S_FIN_INTER_PARTY_MATCH": "event",
+        "S_BATTLE_FIELD_ENTRANCE_INFO": "event",
+        "S_WHISPER": "event",
+        "S_OTHER_USER_APPLY_PARTY": "event",
+        "S_ASK_TELEPORT": "event",
+        "S_NOTIFY_GUILD_QUEST_URGENT": "event",
         "S_SYSTEM_MESSAGE": 1
     }
 }
